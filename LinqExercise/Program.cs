@@ -91,9 +91,9 @@ namespace LinqExercise
             //Print the Sum and then the Average of the employees' YearsOfExperience
             //if their YOE is less than or equal to 10 AND Age is greater than 35
 
-            var totalExp = employees.Where(x => x.YearsOfExperience <= 10 && x.Age > 35);
-            Console.WriteLine($"We have {totalExp.Sum(x=>x.YearsOfExperience)} years of total experience " +
-                $"with an average of {totalExp.Average(x=>x.YearsOfExperience)} years per employeee");
+            var empExp = employees.Where(x => x.YearsOfExperience <= 10 && x.Age > 35);
+            Console.WriteLine($"We have {empExp.Sum(x=>x.YearsOfExperience)} years of total experience " +
+                $"with an average of {Math.Round(empExp.Average(x=>x.YearsOfExperience), 2)} years per employeee");
             Console.WriteLine($"----------");
 
             //Add an employee to the end of the list without using employees.Add()
